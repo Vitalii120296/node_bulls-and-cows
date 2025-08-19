@@ -22,9 +22,11 @@ function getBullsAndCows(userInput, numberToGuess) {
   };
 
   for (let i = 0; i < 4; i++) {
+    const numbersBefore = [];
     if (input[i] === randomNumber[i]) {
       result.bulls += 1;
-    } else if (randomNumber.includes(input[i])) {
+      numbersBefore.push(input[i]);
+    } else if (randomNumber.includes(input[i]) && !numbersBefore.includes(input[i])) {
       result.cows += 1;
     }
   }

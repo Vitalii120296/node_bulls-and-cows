@@ -15,8 +15,7 @@ function generateRandomNumber() {
 
     if (number.length === 0 && randomNumber === 0) {
       randomNumber = Math.ceil(Math.random() * 9);
-      number.push(randomNumber)
-      console.log(randomNumber);
+      number.push(randomNumber);
 
       continue;
     }
@@ -25,7 +24,6 @@ function generateRandomNumber() {
       number.push(randomNumber);
     }
   }
-  console.log(+number.join(''));
 
   return +number.join('');
 }
