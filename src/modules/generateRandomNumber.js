@@ -11,9 +11,17 @@ function generateRandomNumber() {
   const number = [];
 
   while (number.length < 4) {
-    const randomNumber = Math.floor(Math.random() * 10);
+    let randomNumber = Math.floor(Math.random() * 10);
 
-    if (!number.includes(randomNumber) && randomNumber !== 0) {
+    if (number.length === 0 && randomNumber === 0) {
+      randomNumber = Math.ceil(Math.random() * 9);
+      number.push(randomNumber)
+      console.log(randomNumber);
+
+      continue;
+    }
+
+    if (!number.includes(randomNumber)) {
       number.push(randomNumber);
     }
   }

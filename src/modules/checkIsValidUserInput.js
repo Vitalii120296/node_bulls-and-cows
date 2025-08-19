@@ -10,13 +10,11 @@
  * @return {boolean} - True if the user input is valid, false otherwise
  */
 function checkIsValidUserInput(userInput) {
-  const number = new Set(userInput);
-
-  if (number[0] === 0) {
+  if (userInput[0] === 0) {
     return false;
   }
 
-  console.log(number);
+  const number = new Set(userInput);
 
   return !!(+userInput > 999 && number.size === 4);
 }
