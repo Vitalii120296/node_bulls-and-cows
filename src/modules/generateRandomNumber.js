@@ -9,16 +9,18 @@
  */
 function generateRandomNumber() {
   const number = [];
+  let randomNumber;
 
   while (number.length < 4) {
-    let randomNumber = Math.floor(Math.random() * 10);
-
-    if (number.length === 0 && randomNumber === 0) {
+    if (number.length === 0) {
       randomNumber = Math.ceil(Math.random() * 9);
+
       number.push(randomNumber);
 
       continue;
     }
+
+    randomNumber = Math.floor(Math.random() * 10);
 
     if (!number.includes(randomNumber)) {
       number.push(randomNumber);

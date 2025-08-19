@@ -10,7 +10,7 @@
  * @return {boolean} - True if the user input is valid, false otherwise
  */
 function checkIsValidUserInput(userInput) {
-  if (userInput.split('')[0] === 0) {
+  if (userInput.split('')[0] === '0') {
     return false;
   }
 
